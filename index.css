@@ -1,0 +1,371 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+a {
+    text-decoration: none;
+    color: none;
+}
+.parent{
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* align-items: center; */
+    /* margin-top: 5%; */
+}
+.child1{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding: 20px;
+    
+}
+.tasks{
+    display: inline;
+    font-weight: bolder;
+    font-size: 60px;
+    color: wheat;
+}
+.lists{
+    display: inline;
+    font-weight: lighter;
+    font-size: 56px;
+    color: whitesmoke;
+}
+
+#items{
+    color: white;
+    padding-top: 5%;
+    /* padding-left: 15%; */
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.child2{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+
+}
+
+.task{
+
+    background-color: #fff;
+    width: 18vw;
+    height: 50vh;
+    border: 2px solid tomato;
+    border-radius: 10px;
+    box-shadow: 4px 4px 12px gray;
+    margin: 2%;
+    padding: 2%;
+    text-align: center;
+    transition: transform .2s;
+    
+}
+
+/* .task:hover {
+    transform: scale(1.1);
+} */
+
+.task_body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-top: 10px;
+    font-size: 20px;
+}
+.task_title{
+    margin: 0%;
+    font-size: 26px;
+}
+.material-icons{
+    color: tomato;
+    padding:0px 10px 0px 0px;
+    font-size: 40px;
+    cursor: pointer;
+}
+.material-icons:active {
+    transform: scale(0.9);
+}
+
+.addText{
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 100px;
+    color: black;
+}
+
+hr{
+    width: 100%;
+    margin-right:0px;
+}
+
+.addNewList {
+    display: none;
+}
+.addNewListActive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid tomato;
+    border-radius: 10px;
+    text-align: center;
+    width: 35vw;
+    height: 35vh;
+    z-index: 1;
+    position:absolute;
+    top: 30vh;
+    left: 35vw;
+    background-color:white;
+    box-sizing: border-box;
+    padding: 1%;
+    color: tomato;
+    font-weight:lighter;
+    transition: transform .2s;
+
+}
+
+.addNewListActive:hover,
+.addNewItemActive:hover {
+    transform: scale(1.1);
+}
+
+.addNewItemActive,
+.addAnotherItemActive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid tomato;
+    border-radius: 10px;
+    text-align: center;
+    width: 35vw;
+    height: 35vh;
+    z-index: 1;
+    position:absolute;
+    top: 30vh;
+    left: 35vw;
+    background-color:white;
+    box-sizing: border-box;
+    padding: 1%;
+    color: tomato;
+    font-weight:lighter;
+    transition: transform .2s;
+}
+
+#itemBtn{
+    width: 100px;
+    height: 50px;
+    padding: 0%;
+}
+
+#anotherItemBtn {
+    width: 100px;
+    height: 50px;
+    padding: 0%;
+}
+
+.AddNewListTitle {
+    font-size: 36px;
+    font-weight: 100px;
+}
+
+.inputText{
+    width: 60%;
+    height:20%;
+    box-shadow: 1px 1px 4px gray;
+    border: 1px solid tomato;
+    border-radius:5px;
+    font-size: 20px;
+    position: relative;
+}
+
+.newButtonDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    height: 10vh;
+
+}
+
+.btn{
+    color: white;
+    background-color: tomato;
+    border-radius: 50px;
+    border: none;
+    font-size: 24px;
+    margin: 2%;
+    padding: 2%;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.listBtn{
+    width: 100px;
+    height: 50px;
+    padding: 2%;
+    margin: 2%;
+}
+
+.addClose {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    position: relative;
+    /* top: 100px;
+    left: 180px; */
+}
+
+.btn:active {
+    transform: scale(0.9);
+
+}
+.btn-ListBody{
+    position: relative;
+}
+.removeTask {
+    position: absolute;
+    top: 210px;
+    left: 140px;
+}
+
+.addTask {
+    position: absolute;
+    top: 210px;
+    right: -20px;
+    color: blue;
+}
+
+.pendingIcon {
+    font-size: 20px;
+    color: rgb(88, 88, 241);
+}
+
+.pTask {
+    display: flex;
+    align-items: center;
+}
+
+.scratch {
+    font-size: larger;
+    margin: 0;
+    color: blueviolet;
+}
+
+.me{
+    color: red;
+    text-decoration-line: line-through;
+}
+.inactive {
+    display: none;
+}
+.page2Contains {
+    display: none;
+}
+
+.page2Contains.active {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+
+@media all and (max-width: 480px){
+    *{
+        margin: 0;
+    }
+    .parent{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .child1{
+        display: flex;
+        width: 80vw;
+        height: 10vh;
+        margin: 0 ;
+        justify-content: space-between;
+    }
+    .fleft{
+        display: flex;
+        position: relative;
+        left: -20px;
+        align-items: center;
+    }
+    .tasks{
+        font-size: 36px;
+        font-weight: 700;
+
+    }
+    .lists{
+        font-weight: 100;
+        font-size: 36px;
+         color: black;
+    } 
+    .addText{
+        display: inline;
+    }
+    .fright{
+        display: inline;
+        position: relative;
+        left: 30px;
+        top: 90px;
+    }
+    
+    .addIcon{
+        font-size: 36px;
+        position: relative;
+        top: 10px;
+    }
+    
+    .child2{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        position: absolute;
+        top: 200px;
+    }
+    .task{
+        width: 70vw;
+        height: 50vh;
+        box-shadow: 4px 4px 12px gray;
+        padding: 5%;
+        text-align: center;
+    }
+    .task_title{
+        padding: 5%;
+        font-weight: 300;
+        font-size: 26px;
+    }
+    .addTask{
+        left: 180px;
+        top: 200px;
+
+    }
+    .removeTask{
+        right: 180px;
+        top: 200px;
+    }
+}
