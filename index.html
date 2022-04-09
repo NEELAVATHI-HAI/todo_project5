@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoAPPUI_WEB-V2</title>
+    <link rel="stylesheet" href="./todo5.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+    <div class="parent">
+        <div class="child1" id="child1">
+            <div class="fleft">
+                <div class="tasks">Tasks</div>
+                <div class="lists">Lists</div>
+            </div>
+            <div class="fright">
+                <span class="material-icons addIcon" id="addListBtn" style="font-size:48px;color: blue">
+                    add_circle
+                </span>
+                <span style="font-size: 48px; color: whitesmoke; font-family: Verdana;">Add List</span>
+            </div>
+        </div>
+
+
+        <div class="page2Contains" id="page2Contains">
+            <p class="page2BackBtn" id="page2BackBtn">
+                <span class="material-icons">
+                    arrow_back_ios
+                </span>
+            </p>
+            <p class="addText">
+                <span class="material-icons addIcon addNewLists addListBtn page2AddBtn" id="page2AddBtn">
+                    add_circle
+                </span>
+            </p>
+        </div>
+
+        <div class="child2" id="child2">
+        </div>
+
+        <div class="addNewList" id="addNewList">
+            <h2 style="font-weight: lighter; margin-bottom: 6px;">Add New List</h2>
+            <br>
+            <input type="text" class="inputText" id="listText" placeholder="Enter where you want to go..">
+            <br>
+            <div class="addClose">
+                <input type="button" value="Add" name="" id="addBtn" class="btn listBtn">
+                <input type="button" value="Close" name="" id="closeBtn" class="btn listBtn">
+            </div>
+        </div>
+
+        <div class="addNewList" id="addNewItem">
+            <h2 style="font-weight: lighter; margin-bottom: 6px;">Add New Item</h2>
+            <br>
+            <input type="text" class="inputText" id="itemText">
+            <br>
+            <input type="button" value="ADD" name="" id="itemBtn" class="btn">
+        </div>
+
+        <div class="addNewList addAnotherItem" id="addAnotherItem">
+            <h2 style="font-weight: lighter; margin-bottom: 6px;">Add Another Item</h2>
+            <br>
+            <input type="text" class="inputText" id="anotherItemText">
+            <br>
+            <input type="button" value="ADD" name="" id="anotherItemBtn" class="btn">
+        </div>
+
+    </div>
+
+    
+
+    
+    <script src="./todo5.js"></script>
+</body>
+</html>
